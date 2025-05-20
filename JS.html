@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Aira Bianca">
+        <title> CtrlCode101-JAVASCRIPT </title>
+        <link rel="icon" href="integ-logo.png">
+        <link rel="stylesheet" href="javascript-style.css">
+    </head>
+    <body>
+         <header class="top-nav">
+            <img class= "logo-icon" src="integ-logo.png">
+            <div class="logo">CtrlCode101</div>
+            <nav class="nav-links">
+                <a href="#">Take Control. Learn to Code.</a>
+                <input type="text" placeholder="Search..." class="search-box" />
+            </nav>
+          </header>
+
+            <div class="sub-nav">
+                <a href="home.html" title="HOME"><button class="subnav">HOME</button></a>
+                <a href="HTML.html" title="HTML"><button class="subnav">HTML</button></a>
+                <a href="CSS.html" title="CSS"><button class="subnav">CSS</button></a>
+                <a href="AJAX.html" title="AJAX"><button class="subnav">AJAX</button></a>
+                <a href="XML.html" title="XML"><button class="subnav">XML</button></a>
+            </div>
+
+            <div class="third-nav">
+                <h3> The engine behind interactive UIs, real-time updates, and seamless web functionality! </h3>
+            </div>
+
+            <div class="main">
+                <img class="main-image" src="js-img.png" alt="Main Image">
+                <div class="main-text">
+                    <h1> Let's Learn More About JavaScript Language.</h1>
+                    <p> Choose a topic below</p>
+                     <div class="dropdown-container">
+                         <select id="html-topics" onchange="scrollToSection(this.value)">
+                            <option value=""> Select a topic </option>
+                            <option value="#js-description"> Definition of JavaScript </option>
+                            <option value="#js-history"> History of JavaScript </option>
+                            <option value="#js-func"> JavaScript Syntax Rules </option>
+                            <option value="#js-elements"> JavaScript Variables </option>
+                            <option value="#js-datatypes"> JavaScript Data Types </option>
+                            <option value="#js-operators"> JavaScript Arithmetic Operators </option>
+                            <option value="#js-popup-boxes"> JavaScript Standard Pop-Up Boxes </option>
+                            <option value="#js-statements"> JavaScript Statements </option>
+                            <option value="#js-overall-example"> JavaScript Example Board </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-body">
+                <section class="js-desc" id="js-description">
+                    <h1>What is JavaScript?</h1>
+                    <div class="js-desc-flex">
+                        <img class="js-desc-image" src="js-img2.webp" alt="JS Image">
+                        <p> <b>JavaScript</b> is a front-end scripting language developed by Netscape that defines the dynamic behavior of web pages. It adds programming logic that enables interaction with users, handles events, and creates responsive web experiences. Simple yet flexible, JavaScript is powerful enough to manipulate the DOM (Document Object Model), allowing developers to dynamically update content and layout without reloading the page. It plays a vital role in making websites interactive, from button clicks to real-time updates. Learning JavaScript is essential for all web developers, as it programs the behavior and enhances the functionality of modern websites.</p>
+                    </div>
+                </section>
+
+                <section id="js-history">
+                    <h1> History of JavaScript</h1>
+                    <table class="js-history-tbl" cellpadding="8" cellspacing="0">
+                        <thead>
+                            <tr>
+                            <th>Date/Year</th>
+                            <th>Version / Milestone</th>
+                            <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1995</td>
+                                <td>JavaScript created</td>
+                                <td>Brendan Eich developed JavaScript in just 10 days at Netscape. Initially called Mocha, it was later renamed to LiveScript and finally to JavaScript.</td>
+                            </tr>
+                            <tr>
+                                <td>1996</td>
+                                <td> JavaScript submitted to ECMA </td>
+                                <td>Netscape submitted JavaScript to ECMA International for standardization, leading to the creation of the ECMAScript standard.</td>
+                            </tr>
+                            <tr>
+                                <td>1997</td>
+                                <td> ECMAScript 1 (ES1)</td>
+                                <td> The first edition of ECMAScript was officially published, providing a standardized core for JavaScript.</td>
+                            </tr>
+                            <tr>
+                                <td>1999</td>
+                                <td>ECMAScript 3 (ES3)</td>
+                                <td>Introduced regular expressions, better string handling, and exception handling. This became a widely adopted version.</td>
+                            </tr>
+                            <tr>
+                                <td>2009</td>
+                                <td>ECMAScript 5 (ES5)  </td>
+                                <td>Added JSON support, strict mode, and array methods like `forEach`, `map`, and `filter`, making JavaScript more robust and reliable.</td>
+                            </tr>
+                            <tr>
+                                <td>2015</td>
+                                <td> ECMAScript 6 (ES6/ES2015) </td>
+                                <td>A major update that introduced `let`, `const`, arrow functions, classes, modules, promises, and template literals.</td>
+                            </tr>
+                            <tr>
+                                <td>2016-Present</td>
+                                <td> Annual Updates (ES2016+) </td>
+                                <td> JavaScript continues to evolve with yearly ECMAScript updates, adding features like async/await, optional chaining, and more to enhance developer productivity.</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </section>
+
+                <section class="js-func" id="js-func">
+                    <h1>JavaScript Syntax Rules</h1>
+                    <p> JavaScript syntax rules define how code must be written to be understood and executed by the browser. These rules include using semicolons to end statements, proper use of brackets {} for blocks, and parentheses () for function calls or conditionals. Variables must be declared with let, const, or var, and strings must be enclosed in quotes.</p>
+                <table class="js-func-ver" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3>Semicolons are optional</h3>
+                                    <p> In JavaScript, semicolons (;) are not strictly required at the end of every statement because the JavaScript engine uses a feature called Automatic Semicolon Insertion (ASI) to interpret line endings.However, relying on ASI can sometimes lead to unexpected bugs or behavior, especially when writing complex code or multiple statements on one line.</p>
+                                </td>
+
+                                <td>
+                                    <h3> Let the code wrap (Avoid line breaks in the middle of a statement)</h3>
+                                    <p> JavaScript typically expects a complete instruction on one line or properly structured with correct continuation. Inserting line breaks in the middle of a statement (for example, breaking a function call, expression, or assignment in an unexpected place) can confuse the JavaScript interpreter and cause syntax errors or logic bugs. To maintain readability and functionality, ensure statements are written clearly and wrapped only when necessary and valid.</p>
+                                </td>
+
+                                <td>
+                                    <h3>JavaScript is case sensitive</h3>
+                                    <p> JavaScript treats uppercase and lowercase letters as distinct, meaning identifiers such as variable names, function names, and object properties must match exactly. For example, myVar, MyVar, and myvar would be interpreted as three separate variables. Developers must be consistent with naming conventions and capitalization to avoid referencing undefined variables or functions.</p>
+                                </td>
+                        </tr>
+                </table>
+                </section>
+
+
+                <section id="js-elements">
+                    <h1> JavaScript Variables </h1>
+                    <p> JavaScript variables are temporary storage container for data and can be declared using the three keywords that consists of different behaviors.</p>
+                    <table class="js-elem-tbl" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                  <h3>VAR</h3>
+                                  <p> The var keyword is the oldest way to declare variables in JavaScript and has function-level scope. It can be re-declared and updated, but it may cause confusion due to hoisting behavior.</p>
+                                  <div class="js-example-container">
+                                    <div class="js-example-panel">
+                                        <textarea class="js-example-input" id="var-example-input" readonly>
+        function exampleVar() {
+        var message = "Hello, Baby!";
+        console.log(message); // Output: Hello, Baby!
+        var message = "New message is here."; // re-declaring is allowed
+        console.log(message); // Output: New message is here.
+        }
+        exampleVar();
+                                        </textarea>
+                                        <button onclick="runVarExample()" style="margin:8px 0;" class="example-btn">Run</button>
+                                        <label class="example-label">JavaScript Output:</label>
+                                        <div class="js-example-output" id="var-example-output"></div>
+                                    </div>
+                                </div>
+                                </td> 
+
+                                <td>
+                                  <h3>LET</h3>
+                                  <p> The let keyword was introduced in ES6 and provides block-level scope, making it more predictable than var. It allows variable values to be updated but not re-declared within the same scope.</p>
+                                  <div class="js-example-container">
+                                    <div class="js-example-panel">
+                                        <textarea class="js-example-input" id="let-example-input" readonly>
+        function exampleLet() {
+        let count = 25;
+        console.log(count); // Output: 25
+        count = 50; // updating value is allowed
+        console.log(count); // Output: 50
+        // let count = 30; // Error: cannot re-declare in the same scope
+        }
+        exampleLet();
+                                        </textarea>
+                                        <button onclick="runLetExample()" style="margin:8px 0;" class="example-btn">Run</button>
+                                        <label class="example-label">JavaScript Output:</label>
+                                        <div class="js-example-output" id="let-example-output"></div>
+                                    </div>
+                                </div>
+                                </td> 
+
+                                <td>
+                                    <h3> CONST </h3>
+                                    <p>  The const keyword is used to declare variables with values that should not change once assigned. It  has block-level scope, and while the variable itself can't be reassigned, the contents of objects can still be modified.
+ </p>
+                                     <div class="js-example-container">
+                                        <div class="js-example-panel">
+                                        <textarea class="js-example-input" id="const-example-input" readonly>
+        function exampleConst() {
+        const PI = 3.14;
+        console.log(PI); // Output: 3.14
+        // PI = 3.14159; // Error: assignment to constant variable
+        const colors = ["yellow", "purple"];
+        colors.push("indigo"); // Allowed: modifying contents of the array
+        console.log(colors); // Output: ["red", "green", "blue", "indigo"]
+        }
+        exampleConst();
+                                    </textarea>
+                                    <button onclick="runConstExample()" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                    <div class="js-example-output" id="const-example-output"></div>
+                                    </div>
+                                </div>
+                                </td> 
+                            </tr> </table>
+                </section> 
+
+                <section id="js-datatypes">
+                    <h1> JavaScript Data Types</h1>
+                    <p> Primitive Datatypes in JavaScript are basic data types that store a single value directly in a variable. They are immutable, meaning their actual value cannot be changed once created. There are five main types of primitive datatypes:</p>
+                        <table class="js-datatype-tbl" cellpadding="8" cellspacing="8">
+                        <tr>
+                            <td>
+                                <h3>Number</h3>
+                                <p> It represents numeric values, including integers and floating-point numbers.</p>
+                                <div class="js-datatype-panel">
+                                    <label><b>Example: Quantity</b></label>
+                                    <textarea class="js-datatype-input" id="datatype-number-input" readonly>
+        let quantity = 450;
+        console.log(typeof quantity); 
+        console.log(quantity + 34);   
+                                    </textarea>
+                                    <button onclick="runDatatypeExample('datatype-number-input','datatype-number-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                    <div class="js-datatype-output" id="datatype-number-output"></div>
+                                </div>
+                        </td>
+                             <td>
+                                <h3>String</h3>
+                                <p> It is used to represent text enclosed in single, double, or backtick quotes.</p>
+                                <div class="js-datatype-panel">
+                                    <label><b>Example: Name</b></label>
+                                    <textarea class="js-datatype-input" id="datatype-string-input" readonly>
+        let name = "Aira";
+        let greeting = 'Hi there!';
+        let message = `Good morning, ${name}.`;
+        console.log(greeting);         
+        console.log(message);    
+                                    </textarea>
+                                    <button onclick="runDatatypeExample('datatype-string-input','datatype-string-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                    <div class="js-datatype-output" id="datatype-string-output"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td>
+                                    <h3> Boolean</h3>
+                                    <p> It holds either true or false, often used in conditional logic.</p>
+                                    <div class="js-datatype-panel">
+                                        <label><b>Example: Is Adult</b></label>
+                                        <textarea class="js-datatype-input" id="datatype-boolean-input" readonly>
+        let isAdult = true;
+        let isStudent = false;
+        console.log(typeof isAdult); 
+        console.log(isAdult);         
+        console.log(isStudent);        
+                                       </textarea>
+                                       <button onclick="runDatatypeExample('datatype-boolean-input','datatype-boolean-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                       <label class="example-label">JavaScript Output:</label>
+                                       <div class="js-datatype-output" id="datatype-boolean-output"></div>
+                            </td>
+                            <td>
+                                    <h3> Undefined</h3>
+                                    <p> It is a variable that has been declared but not assigned a value.</p>
+                                    <div class="js-datatype-panel">
+                                        <label><b>Example: Undefined Variable</b></label>
+                                        <textarea class="js-datatype-input" id="datatype-undefined-input" readonly>
+        let notAssigned;
+        console.log(typeof notAssigned); 
+        console.log(notAssigned);       
+                                    </textarea>
+                                    <button onclick="runDatatypeExample('datatype-undefined-input','datatype-undefined-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                    <div class="js-datatype-output" id="datatype-undefined-output"></div>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td colspan="2">
+                                    <h3> Null</h3>
+                                    <p> It represents the intentional absence of any value or object.</p>
+                                    <div class="js-datatype-panel">
+                                        <label><b>Example: Null Value</b></label>
+                                    <textarea class="js-datatype-input" id="datatype-null-input" readonly>
+        let emptyValue = null;
+        console.log(typeof emptyValue);
+        console.log(emptyValue);       
+                                    </textarea>
+                                    <button onclick="runDatatypeExample('datatype-null-input','datatype-null-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                    <div class="js-datatype-output" id="datatype-null-output"></div>
+                            </td>
+                        </tr>
+                </table> 
+                </section>
+
+                <section id="js-operators">
+                    <h1> JavaScript Arithmetic Operators </h1>
+                    <p> Arithmetic Operators in JavaScript are used to perform mathematical calculations between numeric values or expressions. These operators include addition, subtraction, multiplication, division, and more. They can also be used with strings for concatenation (in the case of the + operator). Below are descriptions and examples of the common arithmetic operators:</p>
+                     <table class="js-datatype-tbl" cellpadding="8" cellspacing="8">
+                        <tr>
+                            <td>
+                                <h3>Addition</h3>
+                                <p> Performs addition between numbers or concatenates strings.</p>
+                                <div class="js-datatype-panel">
+                                    <label><b>Example: Addition</b></label>
+                                    <textarea class="js-datatype-input" id="datatype-add-input" readonly>
+        let a = 278;
+        let b = 54;
+        let sum = a + b;
+        console.log(sum); 
+                                    </textarea>
+                                    <button onclick="runDatatypeExample('datatype-add-input','datatype-add-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                <div class="js-datatype-output" id="datatype-add-output"></div>
+                                </div>
+                        </td>
+                             <td>
+                                <h3>Subtraction</h3>
+                                <p> Subtracts the right-hand operand from the left-hand operand.</p>
+                                <div class="js-datatype-panel">
+                                    <label><b>Example: Subtraction</b></label>
+                                    <textarea class="js-datatype-input" id="datatype-subtract-input" readonly>
+        let a = 100;
+        let b = 70;
+        let difference = a - b;
+        console.log(difference); 
+                                    </textarea>
+                                    <button onclick="runDatatypeExample('datatype-subtract-input','datatype-subtract-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                    <div class="js-datatype-output" id="datatype-subtract-output"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td>
+                                    <h3> Multiplication</h3>
+                                    <p> Multiplies two numbers.</p>
+                                    <div class="js-datatype-panel">
+                                        <label><b>Example: Multiplication</b></label>
+                                        <textarea class="js-datatype-input" id="datatype-multiply-input" readonly>
+        let a = 55;
+        let b = 7;
+        let product = a * b;
+        console.log(product);
+                                        </textarea>
+                                        <button onclick="runDatatypeExample('datatype-multiply-input','datatype-multiply-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                        <label class="example-label">JavaScript Output:</label>
+                                        <div class="js-datatype-output" id="datatype-multiply-output"></div>
+                            </td>
+                            <td>
+                                    <h3> Division</h3>
+                                    <p> Divides the left-hand operand by the right-hand operand.</p>
+                                    <div class="js-datatype-panel">
+                                        <label><b>Example: Division</b></label>
+                                        <textarea class="js-datatype-input" id="datatype-divide-input" readonly>
+        let a = 45;
+        let b = 9;
+        let quotient = a / b;
+        console.log(quotient);
+                                        </textarea>
+                                        <button onclick="runDatatypeExample('datatype-divide-input','datatype-divide-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                        <label class="example-label">JavaScript Output:</label>
+                                        <div class="js-datatype-output" id="datatype-divide-output"></div>
+                            </td>
+                        </tr>
+                </table> 
+                </section> 
+
+                <section id="js-popup-boxes">
+                    <h1> JavaScript Standard Pop-Up Boxes </h1>
+                    <p> Standard Pop-up Boxes in JavaScript are built-in dialog boxes used to interact with users. These include alert, confirm, and prompt boxes—each serving a different purpose for user interaction.</p>
+                     <table class="js-datatype-tbl" cellpadding="8" cellspacing="8">
+                        <tr>
+                            <td>
+                                <h3>Alert Box</h3>
+                                <p> This displays a simple message with an OK button. It’s useful for showing warnings or information to the user. Popping out above, it shows a notification.</p>
+                                <div class="js-datatype-panel">
+                                    <label><b>Example: Alert Box</b></label>
+                                    <textarea class="js-datatype-input" id="datatype-alert-input" readonly>
+        alert("Hello there, peninsulares! This is an alert box. Goodluck on finals!");
+                                    </textarea>
+                                    <button onclick="runDatatypeExample('datatype-alert-input','datatype-alert-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                    <div class="js-datatype-output" id="datatype-alert-output"></div>
+                                </div>
+                        </td>
+
+                             <td>
+                                <h3>Confirmation Box</h3>
+                                <p> Shows a message with OK and Cancel buttons, returning true if OK is pressed, and false otherwise. It’s commonly used for asking the user to confirm an action.</p>
+                                <div class="js-datatype-panel">
+                                    <label><b>Example: Confirmation Box</b></label>
+                                    <textarea class="js-datatype-input" id="datatype-confirm-input" readonly>
+        let result = confirm("Are you sure you want to continue?");
+        console.log(result); // Output: true if OK, false if Cancel
+                                    </textarea>
+                                    <button onclick="runDatatypeExample('datatype-confirm-input','datatype-confirm-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                    <div class="js-datatype-output" id="datatype-confirm-output"></div>
+                                </div>
+                            </td>
+
+                                                         <td>
+                                <h3>Prompt Box</h3>
+                                <p> Displays a dialog with a message and an input field for the user to enter a value. It returns the entered value or null if canceled.</p>
+                                <div class="js-datatype-panel">
+                                        <label><b>Example: Prompt Box</b></label>
+                                        <textarea class="js-datatype-input" id="datatype-prompt-input" readonly>
+        let userInput = prompt("How is your day?");
+        console.log(userInput); // Output: entered value or null
+                                    </textarea>
+                                    <button onclick="runDatatypeExample('datatype-prompt-input','datatype-prompt-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                    <label class="example-label">JavaScript Output:</label>
+                                    <div class="js-datatype-output" id="datatype-prompt-output"></div>
+                                </div>
+                            </td>
+                        </tr>
+                </table> 
+                </section> 
+
+                <section id="js-statements">
+                    <h1> JavaScript Statements </h1>
+                    <p> JavaScript Statements are instructions that the browser reads and executes in sequence to perform specific actions. They can include variable declarations, assignments, function calls, or control flow structures like conditionals and loops. Each statement typically ends with a semicolon, and they form the backbone of any JavaScript program.</p>
+                     <table class="js-datatype-tbl" cellpadding="8" cellspacing="8">
+                        <tr>
+                            <td>
+                                <h3>Declaration and Assignment</h3>
+                                <p> Declaration and Assignment statements can be combined to create and initialize a variable in a single line. This makes the code concise and clear, allowing you to define a variable and assign it a value at once. </p>
+                                <div class="js-datatype-panel">
+                                    <label><b>Example: Declaration and Assignment</b></label>
+                                    <textarea class="js-datatype-input" id="datatype-declare-input" readonly>
+        let age = 24;
+        let name = "Kaloy";
+        let role = "Engineering Student"  
+        console.log(name);
+        console.log(age); 
+        console.log(role);
+                                </textarea>
+                                <button onclick="runDatatypeExample('datatype-declare-input','datatype-declare-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                <label class="example-label">JavaScript Output:</label>
+                                <div class="js-datatype-output" id="datatype-declare-output"></div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Conditional Statement</h3>
+                            <p> Conditional Statements are the ones that allows decision-making in your code based on conditions. Executes different blocks of code depending on whether a condition is true or false. </p>
+                            <div class="js-datatype-panel">
+                                <label><b>Example: Conditional Statement</b></label>
+                                <textarea class="js-datatype-input" id="datatype-conditional-input" readonly>
+        let age = 18;
+        if (age >= 18) {
+            console.log("You passed the training screening.");
+        } else {
+            console.log("You failed the training screening.");
+        }
+                                </textarea>
+                                <button onclick="runDatatypeExample('datatype-conditional-input','datatype-conditional-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                <label class="example-label">JavaScript Output:</label>
+                                <div class="js-datatype-output" id="datatype-conditional-output"></div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h3>Loop Statement</h3>
+                            <p> Declaration and Assignment statements can be combined to create and initialize a variable in a single line. This makes the code concise and clear, allowing you to define a variable and assign it a value at once. </p>
+                            <div class="js-datatype-panel">
+                                <label><b>Example: Loop Statement</b></label>
+                                    <textarea class="js-datatype-input" id="datatype-loop-input" readonly>
+        for (let i = 1; i <= 7; i++) {
+            console.log("No. " + i);
+        }
+                                </textarea>
+                                <button onclick="runDatatypeExample('datatype-loop-input','datatype-loop-output')" style="margin:8px 0;" class="example-btn">Run</button>
+                                <label class="example-label">JavaScript Output:</label>
+                                <div class="js-datatype-output" id="datatype-loop-output"></div>
+                            </div>      
+                        </td>
+                    </tr>
+                </table> 
+                </section> 
+
+                <section id="js-overall-example" class="js-overall-example">
+                    <h1>Overall Example Board</h1>
+                    <p>Try JavaScript Yourself!</p>
+                    <div class="js-overall-panel">
+                        <textarea class="js-overall-input" id="overall-js-input" placeholder="Type your JavaScript code here..." style="min-height:80px"></textarea>
+                        <button onclick="runOverallExample()" style="margin:8px 0;" class="example-btn">Run</button>
+                        <label class="example-label">JavaScript Output:</label>
+                        <div class="js-datatype-output" id="overall-js-output" style="min-height:40px"></div>
+                    </div>
+                </section>
+            
+            </div>
+                
+            <div class ="footer">
+                <p> &copy; 2023 CtrlCode101. All rights reserved. </p>
+                <p> Created by: Bautista | Dela Cruz | Molina | Naag | Ordaniel | Oseo </p>
+            </div>
+
+              <script>
+                    function scrollToSection(id) {
+                    if (id) {
+                        const section = document.querySelector(id);
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    }
+              </script>
+
+             <script>
+                function runVarExample() {
+                    const code = document.getElementById('var-example-input').value;
+                    let output = '';
+                    const originalLog = console.log;
+                    console.log = function(...args) {
+                        output += args.join(' ') + '\n';
+                        originalLog.apply(console, args);
+                    };
+                    try {
+                        eval(code);
+                        document.getElementById('var-example-output').textContent = output.trim();
+                    } catch (e) {
+                        document.getElementById('var-example-output').textContent = 'Error: ' + e.message;
+                    }
+                    console.log = originalLog; // Restore original console.log
+                }
+            </script>
+
+            <script>
+                function runLetExample() {
+                        const code = document.getElementById('let-example-input').value;
+                        let output = '';
+                        const originalLog = console.log;
+                        console.log = function(...args) {
+                            output += args.join(' ') + '\n';
+                            originalLog.apply(console, args);
+                        };
+                        try {
+                            eval(code);
+                            document.getElementById('let-example-output').textContent = output.trim();
+                        } catch (e) {
+                            document.getElementById('let-example-output').textContent = 'Error: ' + e.message;
+                        }
+                        console.log = originalLog;
+                    }
+            </script>
+
+            <script>
+                function runConstExample() {
+                    const code = document.getElementById('const-example-input').value;
+                    let output = '';
+                    const originalLog = console.log;
+                    console.log = function(...args) {
+                        output += args.join(' ') + '\n';
+                        originalLog.apply(console, args);
+                    };
+                    try {
+                        eval(code);
+                        document.getElementById('const-example-output').textContent = output.trim();
+                    } catch (e) {
+                        document.getElementById('const-example-output').textContent = 'Error: ' + e.message;
+                    }
+                    console.log = originalLog;
+                }
+            </script>
+
+            <script>
+                function runDatatypeExample(inputId, outputId) {
+                    const code = document.getElementById(inputId).value;
+                    let output = '';
+                    const originalLog = console.log;
+                    console.log = function(...args) {
+                        output += args.join(' ') + '\n';
+                        originalLog.apply(console, args);
+                    };
+                    try {
+                        eval(code);
+                        document.getElementById(outputId).textContent = output.trim();
+                    } catch (e) {
+                        document.getElementById(outputId).textContent = 'Error: ' + e.message;
+                    }
+                    console.log = originalLog;
+                }
+            </script>
+
+            <script>
+                function runOverallExample() {
+                    const code = document.getElementById('overall-js-input').value;
+                    let output = '';
+                    const originalLog = console.log;
+                    console.log = function(...args) {
+                        output += args.join(' ') + '\n';
+                        originalLog.apply(console, args);
+                    };
+                    try {
+                        eval(code);
+                        document.getElementById('overall-js-output').textContent = output.trim();
+                    } catch (e) {
+                        document.getElementById('overall-js-output').textContent = 'Error: ' + e.message;
+                    }
+                    console.log = originalLog;
+                }
+            </script>
+
+        </body>
+</html>

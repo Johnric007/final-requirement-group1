@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Aira Bianca">
+        <title> CtrlCode101-AJAX </title>
+        <link rel="icon" href="integ-logo.png">
+        <link rel="stylesheet" href="ajax-style.css">
+    </head>
+    <body>
+         <header class="top-nav">
+            <img class= "logo-icon" src="integ-logo.png">
+            <div class="logo">CtrlCode101</div>
+            <nav class="nav-links">
+                <a href="#">Take Control. Learn to Code.</a>
+                <input type="text" placeholder="Search..." class="search-box" />
+            </nav>
+          </header>
+
+            <div class="sub-nav">
+                <a href="home.html" title="HOME"><button class="subnav">HOME</button></a>
+                <a href="HTML.html" title="HTML"><button class="subnav">HTML</button></a>
+                <a href="CSS.html" title="CSS"><button class="subnav">CSS</button></a>
+                <a href="JS.html" title="JAVASCRIPT"><button class="subnav">JAVASCRIPT</button></a>
+                <a href="XML.html" title="XML"><button class="subnav">XML</button></a>
+            </div>
+
+            <div class="third-nav">
+                <h3> Powering dynamic, fast, and seamless web experiences by updating content in real-time—without refreshing the entire page! </h3>
+            </div>
+
+            <div class="main">
+                <img class="main-image" src="ajax-img.png" alt="Main Image">
+                <div class="main-text">
+                    <h1> Let's Learn More About AJAX Language.</h1>
+                    <p> Choose a topic below</p>
+                     <div class="dropdown-container">
+                         <select id="html-topics" onchange="scrollToSection(this.value)">
+                            <option value=""> Select a topic </option>
+                            <option value="#ajax-description"> Definition of AJAX </option>
+                            <option value="#ajax-history"> History of AJAX </option>
+                            <option value="#ajax-func"> Functionality of AJAX </option>
+                            <option value="#ajax-appli"> Application of AJAX </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ajax-body">
+                <section class="ajax-desc" id="ajax-description">
+                    <h1>What is AJAX?</h1>
+                    <div class="ajax-desc-flex">
+                        <img class="ajax-desc-image" src="ajax-desc.png" alt="AJAX Image">
+                        <p>AJAX, which stands for <b>Asynchronous JavaScript and XML</b>, is a web development technique used to create dynamic and interactive web applications. It allows web pages to communicate with a server in the background without requiring the entire page to reload. By using JavaScript to send and receive data asynchronously—typically in formats like JSON—AJAX enables parts of a web page to be updated independently. This results in a smoother and faster user experience. Common uses of AJAX include loading content dynamically, submitting forms without refreshing the page, and displaying real-time updates such as notifications or chat messages. Although the name includes XML, modern applications often use JSON due to its simplicity and compatibility with JavaScript. Overall, AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+</p>
+                    </div>
+                </section>
+
+                <section id="ajax-history">
+                    <h1> History of AJAX</h1>
+                    <table class="ajax-history-tbl" cellpadding="8" cellspacing="0">
+                        <thead>
+                            <tr>
+                            <th>Date/Year</th>
+                            <th>Version / Milestone</th>
+                            <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1996</td>
+                                <td>Introduction of iframe by Internet Explorer</td>
+                                <td>Microsoft introduced the &lt;iframe&gt; element to enable asynchronous content loading, laying early groundwork for AJAX-style techniques.</td>
+                            </tr>
+                            <tr>
+                                <td>1998</td>
+                                <td>Microsoft develops XMLHttpRequest</td>
+                                <td>Microsoft created the XMLHttpRequest object in Internet Explorer 5 to allow asynchronous communication with the server, originally for use in Outlook Web Access.</td>
+                            </tr>
+                            <tr>
+                                <td>2000</td>
+                                <td>XMLHTTP becomes standard in Internet Explorer 5</td>
+                                <td>Developers began experimenting with partial page updates using XMLHttpRequest, though it was not widely adopted due to browser inconsistencies.</td>
+                            </tr>
+                            <tr>
+                                <td>2004</td>
+                                <td>Google Suggest & Gmail use AJAX</td>
+                                <td>Google released Google Suggest, which updated search suggestions as users typed, and Gmail, which used AJAX to load emails dynamically. These applications demonstrated the power and responsiveness of AJAX.</td>
+                            </tr>
+                            <tr>
+                                <td>2005</td>
+                                <td>Term "AJAX" is coined by Jesse James Garrett</td>
+                                <td>The term AJAX (Asynchronous JavaScript and XML) was introduced in his article "Ajax: A New Approach to Web Applications", bringing attention to this technique and popularizing it across the web development community.</td>
+                            </tr>
+                            <tr>
+                                <td>2006-Present</td>
+                                <td>Widespread adoption & evolution</td>
+                                <td>AJAX became a core part of modern web applications. Over time, XML was often replaced by JSON due to its lighter syntax. Libraries and frameworks like jQuery, Angular, and React built AJAX functionality into their ecosystems using newer APIs like fetch() and async/await.</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </section>
+
+                <section class="ajax-func" id="ajax-func">
+                    <h1>Functionalities of AJAX</h1>
+                    <p> AJAX functionalities enable web pages to communicate with servers asynchronously, allowing parts of a page to update dynamically without needing a full reload. This results in faster interactions, smoother user experiences, and real-time content updates such as form submissions, live search, and chat applications. 
+                        Moreover, we have here different specific functionalities of the said language:</p>
+                <table class="ajax-func-ver" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3>Asynchronous Data Exchange</h3>
+                                    <p> Asynchronous data exchange allows AJAX to communicate with the server in the background without disrupting the user's experience. This means users can continue interacting with the page while data is being sent or received.</p>
+                                </td>
+                                <td>
+                                    <h3>Partial Page Updates</h3>
+                                    <p> Partial page updates allow only specific sections of a webpage to be refreshed without reloading the entire page. This improves performance and provides a smoother, more seamless user experience.</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                    <h3>Improved User Experience</h3>
+                                    <p> AJAX enables smooth and dynamic content updates that make web applications feel faster and more responsive. This leads to a more engaging and seamless user experience without unnecessary page reloads.</p>
+                                </td>
+                                <td>
+                                    <h3>Reduced Server Load</h3>
+                                    <p> AJAX minimizes server load by only requesting and updating the necessary data instead of reloading entire pages. This efficient communication helps optimize bandwidth usage and improves overall application performance.</p>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3> Server Communication </h3>
+                                <p>AJAX uses the XMLHttpRequest object or the modern fetch() API to send HTTP requests like GET and POST. These requests allow it to retrieve or send data between the client and server asynchronously. </p>
+                            </td>
+                            <td>
+                                <h3> Supports Various Data Formats </h3>
+                                <p>AJAX supports multiple data formats including JSON, XML, HTML, and plain text. This flexibility allows developers to choose the best format for their application's needs. </p>
+                            </td>
+                        </tr>
+                </table>
+                </section>
+
+
+                <section id="ajax-appli">
+                    <h1> Application of AJAX </h1>
+                    <p> The panel below demonstrates how AJAX can fetch and display data from a server without reloading the page. When you click the "Get Random User" button, JavaScript sends a request to a public API, retrieves user information, and instantly updates the panel with the user's name, email, and photo. This showcases how AJAX enables dynamic, real-time content updates for a smoother and more interactive web experience.</p>
+                    <div class="ajax-appli-panel">
+                    <div class="ajax-appli-example-panel">
+                        <h4>Sample AJAX Application: Fetch Random User</h4>
+                        <div class="ajax-appli-example-box">
+                            <button onclick="getUser()">Get Random User</button>
+                            <div id="user-result" style="margin-top:15px;"></div>
+                        </div>
+                        <textarea class="ajax-appli-example-input">
+                    &lt;button onclick="getUser()"&gt;Get Random User&lt;/button&gt;
+                    &lt;div id="user-result"&gt;&lt;/div&gt;
+                    &lt;script&gt;
+                    function getUser() {
+                        fetch('https://randomuser.me/api/')
+                            .then(response =&gt; response.json())
+                            .then(data =&gt; {
+                                const user = data.results[0];
+                                document.getElementById('user-result').innerHTML =
+                                    '&lt;b&gt;Name:&lt;/b&gt; ' + user.name.first + ' ' + user.name.last + '&lt;br&gt;' +
+                                    '&lt;b&gt;Email:&lt;/b&gt; ' + user.email + '&lt;br&gt;' +
+                                    '&lt;img src="' + user.picture.medium + '" style="border-radius:50%;margin-top:8px;"&gt;';
+                            })
+                            .catch(() =&gt; {
+                                document.getElementById('user-result').innerText = 'Failed to fetch user.';
+                            });
+                    }
+                    &lt;/script&gt;
+                        </textarea>
+                    </div>
+                    </div>
+                </section>
+                </div>
+
+            <div class ="footer">
+                <p> &copy; 2023 CtrlCode101. All rights reserved. </p>
+                <p> Created by: Bautista | Dela Cruz | Molina | Naag | Ordaniel | Oseo </p>
+                </div>
+              <script>
+                    function scrollToSection(id) {
+                    if (id) {
+                        const section = document.querySelector(id);
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    }
+              </script>
+              <script>
+                    function toggleExample(btn) {
+                        const panel = btn.nextElementSibling;
+                        panel.style.display = panel.style.display === "none" ? "block" : "none";
+                    }
+
+                    function getUser() {
+                        // Sample Filipino users (pwede mong dagdagan)
+                        const Users = [
+                            {
+                                name: { first: "Lucas", last: "Gomez" },
+                                email: "lucas.gomez@email.com",
+                                picture: { medium: "https://randomuser.me/api/portraits/men/75.jpg" }
+                            },
+                            {
+                                name: { first: "Maria", last: "Santos" },
+                                email: "maria.santos@email.com",
+                                picture: { medium: "https://randomuser.me/api/portraits/women/65.jpg" }
+                            },
+                            {
+                                name: { first: "Jericho", last: "Harrington" },
+                                email: "jericho.harrington@email.com",
+                                picture: { medium: "https://randomuser.me/api/portraits/men/85.jpg" }
+                            }
+                        ];
+                        // Random pick
+                        const user = Users[Math.floor(Math.random() * Users.length)];
+                        document.getElementById('user-result').innerHTML =
+                            '<b>Name:</b> ' + user.name.first + ' ' + user.name.last + '<br>' +
+                            '<b>Email:</b> ' + user.email + '<br>' +
+                            '<img src="' + user.picture.medium + '" style="border-radius:50%;margin-top:8px;">';
+                    }
+                </script>
+        </body>
+</html>

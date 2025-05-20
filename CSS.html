@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Aira Bianca">
+        <title> CtrlCode101-CSS </title>
+        <link rel="icon" href="integ-logo.png">
+        <link rel="stylesheet" href="css-style.css">
+    </head>
+    <body>
+         <header class="top-nav">
+            <img class= "logo-icon" src="integ-logo.png">
+            <div class="logo">CtrlCode101</div>
+            <nav class="nav-links">
+                <a href="#">Take Control. Learn to Code.</a>
+                <input type="text" placeholder="Search..." class="search-box" />
+            </nav>
+          </header>
+
+            <div class="sub-nav">
+                <a href="home.html" title="HOME"><button class="subnav">HOME</button></a>
+                <a href="HTML.html" title="HTML"><button class="subnav">HTML</button></a>
+                <a href="JS.html" title="JAVASCRIPT"><button class="subnav">JAVASCRIPT</button></a>
+                <a href="AJAX.html" title="AJAX"><button class="subnav">AJAX</button></a>
+                <a href="XML.html" title="XML"><button class="subnav">XML</button></a>
+            </div>
+
+            <div class="third-nav">
+                <h3> Cascading Style Sheets — Styling the web, one element at a time! </h3>
+            </div>
+
+            <div class="main">
+                <img class="main-image" src="css-img.png" alt="Main Image">
+                <div class="main-text">
+                    <h1> Let's Learn More About CSS Language.</h1>
+                    <p> Choose a topic below</p>
+                     <div class="dropdown-container">
+                         <select id="html-topics" onchange="scrollToSection(this.value)">
+                            <option value=""> Select a topic </option>
+                            <option value="#definition"> Definition of CSS </option>
+                            <option value="#css-history"> History of CSS </option>
+                            <option value="#css-selectors"> CSS Selectors </option>
+                            <option value="#css-bg-colors"> CSS Background and Colors </option>
+                            <option value="#css-fonts"> CSS Fonts and Styling </option>
+                            <option value="#css-box-model"> CSS Box Model </option>
+                            <option value="#css-positioning"> CSS Positioning and Layout</option>
+                            <option value="#css-display"> CSS Display and Visibility </option>
+                           <option value="#css-overall-example"> CSS Overall Example Board </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="css-body">
+               <section id="definition">
+                    <h1> Definitions of CSS</h1>
+                    <p><b> CSS (Cascading Style Sheets) </b> is a stylesheet language used to control the appearance and layout of HTML or XML documents. It allows developers to separate content from design, making it easier to apply consistent styles—such as colors, fonts, spacing, and positioning—across multiple web pages.</p>
+                </section>
+
+                <section id="css-history">
+                    <h1> History of CSS</h1>
+                    <table class="css-history-tbl" cellpadding="8" cellspacing="0">
+                        <thead>
+                            <tr>
+                            <th>Date/Year</th>
+                            <th>Version / Milestone</th>
+                            <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1996</td>
+                                <td>CSS1 introduced</td>
+                                <td>Created by Håkon Wium Lie and Bert Bos; Focused on basic styling: fonts, colors, margins, padding, and text alignment.</td>
+                            </tr>
+                            <tr>
+                                <td>1998</td>
+                                <td>CSS2 released</td>
+                                <td>Expanded styling capabilities with absolute/relative positioning, z-index, media types, and bidirectional text support.</td>
+                            </tr>
+                            <tr>
+                                <td>2005-2011</td>
+                                <td>CSS2.1 becomes recommended </td>
+                                <td>Refined and corrected CSS2. Became the stable base for browser support and current layout behavior.</td>
+                            </tr>
+                            <tr>
+                                <td>2009-Present</td>
+                                <td>CSS3</td>
+                                <td>CSS3 introduced as modular specifications, allowing faster and independent development of features like transitions, animations, gradients, flexbox, and media queries.</td>
+                            </tr>
+                            <tr>
+                                <td>2012–2017</td>
+                                <td>Widespread adoption of CSS3 features</td>
+                                <td>Modern browsers start supporting features like border-radius, box-shadow, flexbox, keyframes animations, and :nth-child() selectors.</td>
+                            </tr>
+                            <tr>
+                                <td>2018-Present</td>
+                                <td>Advanced layout models and modern features</td>
+                                <td>CSS Grid Layout becomes widely supported, offering powerful two-dimensional layout control. Variables (--custom-properties), clamp(), aspect-ratio, and container queries enhance responsiveness and flexibility.</td>
+                            </tr> 
+                        </tbody>
+                        </table>
+                </section>
+
+                <section class="css-selectors" id="css-selectors">
+                    <h1>What is CSS Selectors?</h1>
+                    <div class="css-selectors-flex">
+                       <p>CSS selectors are patterns used in stylesheets to select and style specific HTML elements. They allow you to apply styles (like color, size, font, spacing) to elements based on their tag name, class, ID, attributes, or position in the HTML structure. Selectors are the core part of how CSS knows what to style on a webpage.</p> 
+                       <h3> Here are some common CSS Selectors</h3>
+                       <table class="css-selectors-tbl" cellpadding="8" cellspacing="8">
+                        <tr>
+                            <td>
+                                <h3> Universal Selector (*) </h3>
+                                <p> Selects all elements on the page. </p>
+                                <div class="css-example-panel">
+                                    <textarea class="css-example-input" readonly>* { color: red; }</textarea>
+                                    <label class="css-example-label">Example Output:</label>
+                                    <div class="css-example-output" style="color: red;">This text is red because of the universal selector.</div>
+                                </div>
+                            </td>
+                            <td>
+                                <h3> Type Selector (div) </h3>
+                                <p> Selects all elements of a specific type, like all &lt;div&gt; elements. </p>
+                                <div class="css-example-panel">
+                                    <textarea class="css-example-input" readonly>
+     p {
+      color: blue;
+      font-weight: bold;
+     }
+                                    </textarea>
+                                    <label class="css-example-label">Example Output:</label>
+                                    <div class="css-example-output" style="color: blue; font-weight: bold;">
+                                        This is a paragraph styled by the type selector.
+                                    </div>
+                                </div>
+                              </td>
+                            <td>
+                                <h3> Class Selector (.classname) </h3>
+                                <p> Selects elements with a specific class attribute. </p>
+                                <div class="css-example-panel">
+                                <textarea class="css-example-input" readonly>
+    .my-class {
+      background: #ffe082;
+      color: #294474;
+      padding: 8px;
+      border-radius: 5px;
+    }
+                                </textarea>
+                                <label class="css-example-label">Example Output:</label>
+                                <div class="css-example-output" style="background: #ffe082; color: #294474; padding: 8px; border-radius: 5px;">
+                                    This text is styled using the <b>.my-class</b> selector.
+                                </div>
+                            </div>
+                            </td> 
+                          </tr>
+                          
+                          <tr>
+                            <td>
+                                <h3> ID Selector (#id) </h3>
+                                <p> Selects all elements on the page. </p>
+                                <div class="css-example-panel">
+                                  <textarea class="css-example-input" readonly>
+    #special {
+      background: #b3e5fc;
+      color: #01579b;
+      padding: 8px;
+      border-radius: 5px;
+    }
+                                  </textarea>
+                                  <label class="css-example-label">Example Output:</label>
+                                  <div class="css-example-output" style="background: #b3e5fc; color: #01579b; padding: 8px; border-radius: 5px;">
+                                      This text is styled using the <b>#special</b> selector.
+                                  </div>
+                              </div>
+                            </td>
+                            <td>
+                                <h3> Group Selector (h1, h2, h3) </h3>
+                                <p> Selects all elements of a specific type, like all &lt;div&gt; elements. </p>
+                                <div class="css-example-panel">
+                                <textarea class="css-example-input" readonly>
+    h1, h2, h3 {
+      color: #d84315;
+      font-family: Tahoma, sans-serif;
+    }
+                                  </textarea>
+                                  <label class="css-example-label">Example Output:</label>
+                                  <div class="css-example-output" style="color: #3569ae; font-family: Tahoma, sans-serif;">
+                                      <h1 style="margin:0;">This is an H1 heading</h1>
+                                      <h2 style="margin:0;">This is an H2 heading</h2>
+                                      <h3 style="margin:0;">This is an H3 heading</h3>
+                                      <span style="color:#222; font-family:inherit; font-size:13px;">All are styled by the group selector <b>h1, h2, h3</b>.</span>
+                                  </div>
+                              </div>
+                            </td>
+                            <td>
+                                <h3> Descendant Selector (section p) </h3>
+                                <p> Selects elements with a specific class attribute. </p>
+                              <div class="css-example-panel">
+                                <textarea class="css-example-input" readonly>
+    section p {
+      color: #388e3c;
+      style: italic;
+     }
+                                </textarea>
+                                <label class="css-example-label">Example Output:</label>
+                                <div class="css-example-output" style="color: #388e3c; font-style: italic;">
+                                    <section>
+                                        <p>This paragraph is inside a section and is styled by <b>section p</b>.</p>
+                                    </section>
+                                    <div>
+                                        <p style="color:#222; font-style:normal;">This paragraph is outside a section and is not affected.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </td> 
+                          </tr>
+                       </table>
+                    </div>
+                </section>
+
+                <section id="css-bg-colors" class="css-bg-colors">
+                    <h1>CSS Background and Colors</h1>
+                    <p> The CSS Background and Colors properties let you set the text color, background color, and even background images of elements.</p>
+                    <table class="css-bg-colors" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3>CSS Background</h3>
+                                    <p> The CSS background property allows you to control the visual background of an element, such as its color, image, position, size, and repeat behavior. It plays a key role in defining the look and feel of a webpage, helping to add contrast, texture, or visual interest to elements like headers, sections, buttons, and entire layouts. CSS provides both shorthand and individual background properties to give designers precise control over how backgrounds behave.</p>
+                                    <div class="example-container">
+                                      <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                    <div class="css-bg-example-panel">
+                                    <textarea class="css-bg-example-input" readonly>
+    div {
+      background: linear-gradient(90deg, #42a5f5, #478ed1);
+      color: white;
+      padding: 16px;
+      border-radius: 8px;
+      }
+                                    </textarea>
+                                    <label class="css-example-label">Example Output:</label>
+                                    <div class="css-example-output" style="background: linear-gradient(90deg, #42a5f5, #478ed1); color: white; padding: 16px; border-radius: 8px;">
+                                        This div uses a gradient background set by the <b>background</b> property.
+                                    </div>
+                                </div>
+                                </td>
+                                <td>
+                                    <h3>CSS Color</h3>
+                                    <p> The CSS color property is used to set the text color of HTML elements. It plays a vital role in web design by enhancing readability, creating visual contrast, and matching the overall aesthetic of a website. CSS allows developers to specify colors in multiple formats, including named colors (like red or blue), hex codes (e.g., #ff0000), RGB values (e.g., rgb(255, 0, 0)), HSL values, and even transparent colors using RGBA or HSLA.</p>
+                                    <div class="example-container">
+                                      <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                    <div class="css-bg-example-panel">
+                                    <textarea class="css-bg-example-input" readonly>
+    p {
+      color: ##0f4ea7;
+      font-size: 18px;
+      }
+                                    </textarea>
+                                    <label class="css-example-label">Example Output:</label>
+                                    <label class="css-example-label">Example Output:</label>
+                                    <div class="css-example-output" style="color: #0f4ea7; font-size: 18px;">
+                                        This paragraph uses the <b>color</b> property to set its text color.
+                                    </div>
+                                    </div>
+                                </td>
+                        </tr>
+                </table> </section>
+
+                <section id="css-font-styling" class="css-font-styling">
+                    <h1>CSS Fonts and Styling</h1>
+                    <p> The CSS Font and Text Styling in CSS enhance the appearance and readability of web content by customizing typography and text layout.</p>
+                    <table class="css-font-styling" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3>CSS Fonts Styling </h3>
+                                    <p> Font styling in CSS refers to the customization of text appearance by modifying the font family, style, weight, size, and variant. Common properties include:</p>
+                                    <ul>
+                                      <li> <b> font-family </b> – sets the typeface (e.g., Arial, Georgia, sans-serif). </li>
+                                      <li> <b> font-size </b> – controls the size of the text (e.g., 16px, 1.2em). </li>
+                                      <li> <b> font-style </b> – adds styles like italic (e.g., normal, italic). </li>
+                                      <li> <b> font-weight </b> – changes the boldness (e.g., normal, bold, 400, 700). </li>
+                                      <li> <b> font-variant </b> – enables small-caps and other text effects. </li>
+                                    </ul>
+                                     <div class="example-container">
+                                      <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                    <div class="css-fs-example-panel">
+                                        <textarea class="css-fs-example-input" readonly>
+    p {
+      font-family: 'Tahoma', Arial, sans-serif;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: bold;
+      font-variant: small-caps;
+    }
+                                        </textarea>
+                                        <label class="css-example-label">Example Output:</label>
+                                        <div class="css-fs-example-output" style="font-family: 'Tahoma', Arial, sans-serif; font-size: 20px; font-style: italic; font-weight: bold; font-variant: small-caps;">
+                                            This paragraph uses various <b>font</b> properties in CSS!
+                                        </div>
+                                    </div>
+                                </div>
+                                </td>
+                                <td>
+                                    <h3>CSS Text Styling</h3>
+                                    <p> Text styling in CSS focuses on the layout and presentation of text beyond the font itself. It includes properties like:.</p>
+                                    <ul>
+                                      <li> <b>text-align </b> – aligns text left, right, center, or justify.</li>
+                                      <i> <b> text-decoration</b> - – adds underlines, overlines, or line-through (used for links, emphasis, or deletion).</i>
+                                      <li> <b>text-transform</b> – changes capitalization (e.g., uppercase, lowercase, capitalize).</li>
+                                      <li> <b>letter-spacing</b> – adjusts spacing between letters.</li>
+                                      <li> <b>line-height</b> – sets vertical space between lines of text.</li>
+                                    </ul>
+                                    <div class="example-container">
+                                      <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                    <div class="css-fs-example-panel">
+                                        <textarea class="css-fs-example-input" readonly>
+   p {
+    text-align: center;
+    text-decoration: underline wavy #e53935;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 2;
+    }  
+                                    </textarea>
+                                    <label class="css-example-label">Example Output:</label>
+                                    <div class="css-fs-example-output" style="text-align: center; text-decoration: underline wavy #35b3e5; text-transform: uppercase; letter-spacing: 2px; line-height: 2;">
+                                        This paragraph uses various <b>text styling</b> properties in CSS!
+                                    </div>
+                                  </div>
+                                </td>
+                        </tr>
+                </table> </section>
+                
+                <section id="box-model">
+                    <h1> What is a Box Model?</h1>
+                    <div class="bxModel-flex">
+                        <img class="bxModel-image" src="css-box-model-img.webp" alt="Box Model Image">
+                        <p>The CSS box model is a fundamental concept that describes how elements are structured and spaced on a webpage. Every HTML element is considered a rectangular box made up of four parts: content, padding, border, and margin. The content holds the actual text or media, padding adds space inside the border, the border wraps the element, and the margin creates space between elements—understanding this model is essential for controlling layout and spacing in web design. It allows developers to fine-tune how elements interact with one another, ensuring proper alignment and preventing overlap or unexpected gaps. Mastering the box model is key to creating clean, responsive, and visually balanced web layouts.</p>
+                    </div>
+                </section>
+
+                <section id="css-positioning">
+                    <h1> CSS Positioning and Layout </h1>
+                    <p> Positioning and Layout in CSS control how elements are arranged and displayed within a webpage. It uses different position types such as static, relative, absolute, fixed, and sticky to determine an element's placement in relation to the document flow or other elements. With these properties, developers can layer elements, create overlapping content, or keep elements fixed during scrolling. Layout techniques like Flexbox and Grid also play a crucial role in aligning and distributing space efficiently across complex designs. Understanding positioning and layout is essential for building responsive, organized, and visually appealing web pages. </p>
+                    <h3> Here are some common Position Types:</h3>
+                     <table class="css-positioning-tbl" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                  <h3>Static Position</h3>
+                                  <p>Static-positioned elements are set as the default and have no impact on right, left, bottom, or top properties. They don’t have any special direction. It was made positioned on the normal Page.</p>
+                                  <div class="posi-example-container">
+                                      <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                      <div class="posi-example-panel">
+                                          <textarea class="posi-example-input" readonly>
+    img {
+        position: static;
+        width: 120px;
+        border: 2px solid #2196f3;
+    }
+                                      </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="posi-example-output">
+                                          <img src="css-img.png" alt="Static Example" style="position: static; width: 120px; border: 2px solid #2196f3;">
+                                      </div>
+                                  </div>
+                                </div>
+                                </td> 
+
+                                <td>
+                                    <h3> Relative Position </h3>
+                                    <p>  It is helpful while creating a CSS layout, and it finds quite difficult. An HTML element with this property works the same as a static, and they differed by setting the right and left values to the ancestor element. </p>
+                                     <div class="posi-example-container">
+                                      <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                      <div class="posi-example-panel">
+                                          <textarea class="posi-example-input" readonly>
+      img {
+          position: relative;
+          left: 40px;
+          width: 120px;
+          border: 2px solid #e53935;
+      }
+                                      </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="posi-example-output">
+                                          <img src="css-img.png" alt="Relative Example" style="position: relative; left: 40px; width: 120px; border: 2px solid #e53935;">
+                                      </div>
+                                  </div>
+                                </div>
+                                </td> 
+
+                                <td>
+                                    <h3> Absolute Position </h3>
+                                    <p>  In this position, an element places itself with respect to itself and excludes itself from the document’s normal flow. Generally, they position themselves in the top-left of their ancestor or parent element. </p>
+                                    <div class="posi-example-container">
+                                      <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                    <div class="posi-example-panel" style="display:none;">
+                                        <textarea class="posi-example-input" readonly>
+    .parent {
+        position: relative;
+        width: 200px;
+        height: 120px;
+        background: #e3f2fd;
+        border: 1px solid #90caf9;
+    }
+    .child {
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        width: 120px;
+        border: 2px solid #43a047;
+    }
+                                        </textarea>
+                                        <label class="example-label">Example Output:</label>
+                                        <div class="posi-example-output">
+                                            <div class="parent" style="position: relative; width: 200px; height: 120px; background: #e3f2fd; border: 1px solid #90caf9;">
+                                                <img class="child" src="css-img.png" alt="Absolute Example" style="position: absolute; top: 20px; left: 40px; width: 120px; border: 2px solid #43a047;">
+                                            </div>
+                                            <div style="font-size:13px; color:#294474; margin-top:6px;">
+                                                The image is absolutely positioned inside its parent box.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </td> 
+                            </tr> </table>
+                </section>
+                
+                <section id="css-display">
+                    <h1>CSS Display and Visibility </h1>
+                    <p> CSS Display and Visibility control how elements appear and occupy space on a webpage. The display property determines the layout behavior of an element, such as block, inline, flex, or grid, affecting how elements are arranged in relation to others. On the other hand, the visibility property controls whether an element is visible or hidden, without affecting the layout—using values like visible or hidden. Unlike display: none, which removes the element from the layout entirely, visibility: hidden keeps the space reserved. These properties are essential for dynamic interfaces, responsive design, and managing user interactions smoothly. </p>
+                    <h3> Here are the example of these two: </h3>
+                    <table class="css-display-ver" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3> CSS Display </h3>
+                                    <p>  The CSS display property defines how an element is rendered in the document flow, such as block, inline, flex, or grid. It controls whether elements stack vertically, align horizontally, or form complex layouts. Using display: none removes the element entirely from the page, making it useful for dynamic visibility control. </p>
+                                    <div class="example-container">
+                                  <div class="posi-example-container">
+                                      <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                      <div class="posi-example-panel">
+                                          <textarea class="posi-example-input" readonly>
+      .box {
+          display: inline-block;
+          background: #e3f2fd;
+          color: #294474;
+          padding: 12px 24px;
+          border: 2px solid #2196f3;
+          margin: 4px;
+      }
+                                        </textarea>
+                                        <label class="example-label">Example Output:</label>
+                                        <div class="posi-example-output">
+                                            <div class="box" style="display:inline-block; background:#e3f2fd; color:#294474; padding:12px 24px; border:2px solid #2196f3; margin:4px;">Box 1</div>
+                                            <div class="box" style="display:inline-block; background:#e3f2fd; color:#294474; padding:12px 24px; border:2px solid #2196f3; margin:4px;">Box 2</div>
+                                            <div class="box" style="display:inline-block; background:#e3f2fd; color:#294474; padding:12px 24px; border:2px solid #2196f3; margin:4px;">Box 3</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </td> 
+                    
+                                <td>
+                                    <h3> CSS Visibility </h3>
+                                    <p> The CSS visibility property controls whether an element is visible or hidden on a webpage without changing its layout space. When set to hidden, the element becomes invisible, but it still occupies space in the document. Unlike display: none, which removes the element entirely from the layout, visibility: hidden simply hides it while preserving its position.</p>
+                                   <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                  <div class="posi-example-panel" style="display:none;">
+                                        <textarea class="posi-example-input" readonly>
+      .visible-box {
+          visibility: visible;
+          background: #3d79ad;
+          color: #294474;
+          padding: 12px 24px;
+          border: 2px solid #009688;
+          margin: 4px;
+      }
+      .hidden-box {
+          visibility: hidden;
+          background: #ffcdd2;
+          color: #b71c1c;
+          padding: 12px 24px;
+          border: 2px solid #b71c1c;
+          margin: 4px;
+      }
+                                        </textarea>
+                                        <label class="example-label">Example Output:</label>
+                                        <div class="posi-example-output">
+                                            <div class="visible-box" style="visibility: visible; background: #95b6d3; color: #294474; padding: 12px 24px; border: 2px solid #2772a4; margin: 4px;">
+                                                This box is <b>visible</b>.
+                                            </div>
+                                            <div class="hidden-box" style="visibility: hidden; background: #ffcdd2; color: #b71c1c; padding: 12px 24px; border: 2px solid #b71c1c; margin: 4px;">
+                                                This box is <b>hidden</b> (space is still reserved).
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </td> </tr> </table>
+                </section>
+
+                <section id="css-overall-example" class="css-overall-example">
+                    <h1>Overall Example Board</h1>
+                    <p>Try CSS Yourself!</p>
+                    <div class="css-overall-panel">
+                        <textarea class="css-overall-input" id="overall-js-input" placeholder="Type your JavaScript code here..." style="min-height:80px"></textarea>
+                        <button onclick="runOverallExample()" style="margin:8px 0;" class="example-btn">Run</button>
+                        <label class="example-label">CSS Output:</label>
+                        <div class="css-datatype-output" id="overall-js-output" style="min-height:40px"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class ="footer">
+                <p> &copy; 2023 CtrlCode101. All rights reserved. </p>
+                <p> Created by: Bautista | Dela Cruz | Molina | Naag | Ordaniel | Oseo </p>
+
+              <script>
+                    function scrollToSection(id) {
+                    if (id) {
+                        const section = document.querySelector(id);
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    }
+              </script>
+              <script>
+                    function toggleExample(btn) {
+                        const panel = btn.nextElementSibling;
+                        panel.style.display = panel.style.display === "none" ? "block" : "none";
+                    }
+              </script>
+
+              <script>
+                    function runOverallExample() {
+                        // Get the user CSS code
+                        const cssCode = document.getElementById('overall-js-input').value;
+
+                        // Remove any previous injected style
+                        let oldStyle = document.getElementById('user-css-style');
+                        if (oldStyle) oldStyle.remove();
+
+                        // Create a new style tag
+                        const style = document.createElement('style');
+                        style.id = 'user-css-style';
+                        style.textContent = cssCode;
+                        document.head.appendChild(style);
+
+                        // Show a preview box styled by the user's CSS
+                        const outputDiv = document.getElementById('overall-js-output');
+                        outputDiv.innerHTML = `
+                            <div class="css-preview-box">
+                                <p>This is a preview box. Style me with your CSS!</p>
+                            </div>
+                        `;
+                    }
+</script>
+    </body>
+</html>
