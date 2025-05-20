@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Aira Bianca">
+        <title> CtrlCode101-XML </title>
+        <link rel="icon" href="integ-logo.png">
+        <link rel="stylesheet" href="xml-style.css">
+    </head>
+    <body>
+         <header class="top-nav">
+            <img class= "logo-icon" src="integ-logo.png">
+            <div class="logo">CtrlCode101</div>
+            <nav class="nav-links">
+                <a href="#">Take Control. Learn to Code.</a>
+                <input type="text" placeholder="Search..." class="search-box" />
+            </nav>
+          </header>
+
+            <div class="sub-nav">
+                <a href="home.html" title="HOME"><button class="subnav">HOME</button></a>
+                <a href="HTML.html" title="HTML"><button class="subnav">HTML</button></a>
+                <a href="CSS.html" title="CSS"><button class="subnav">CSS</button></a>
+                <a href="JS.html" title="JAVASCRIPT"><button class="subnav">JAVASCRIPT</button></a>
+                <a href="AJAX.html" title="AJAX"><button class="subnav">AJAX</button></a>
+            </div>
+
+            <div class="third-nav">
+                <h3> A structured and flexible language for storing and exchanging data across diverse systems with clarity and consistency! </h3>
+            </div>
+
+            <div class="main">
+                <img class="main-image" src="xml-img.png" alt="Main Image">
+                <div class="main-text">
+                    <h1> Let's Learn More About XML Language.</h1>
+                    <p> Choose a topic below</p>
+                     <div class="dropdown-container">
+                         <select id="html-topics" onchange="scrollToSection(this.value)">
+                            <option value=""> Select a topic </option>
+                            <option value="#xml-description"> Definition of XML </option>
+                            <option value="#xml-history"> History of XML </option>
+                            <option value="#xml-func"> XML Building Blocks </option>
+                            <option value="#xml-elements"> XML Elements </option>
+                            <option value="#xml-tags"> XML Tags </option>
+                            <option value="#xml-attributes"> XML Attributes & Characters</option>
+                            <option value="#xml-overall-example"> XML Example Board</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="xml-body">
+                <section class="xml-desc" id="xml-description">
+                    <h1>What is XML?</h1>
+                    <div class="xml-desc-flex">
+                        <img class="xml-desc-image" src="xml-img2.png" alt="XML Image">
+                        <p>A markup language called <b>Extensible Markup Language (XML)</b> provides rules for describing any type of data. As opposed to other programming languages, XML cannot do computations by itself. Instead, organized data may be managed using any computer language or application. It is ideal for data sharing across different systems since it is intelligible to both humans and machines. Web development, configuration files, data storage, and web services like SOAP all commonly use XML. It supports custom tags, follows a hierarchical structure like a tree, and may be verified using XML Schema or DTD to guarantee data accuracy and consistency. XML also promotes data portability by allowing systems with different platforms and technologies to exchange information reliably. Its extensibility makes it suitable for a wide range of industries, from finance and healthcare to publishing and telecommunications.</p>
+                    </div>
+                </section>
+
+                <section id="xml-history">
+                    <h1> History of XML</h1>
+                    <table class="xml-history-tbl" cellpadding="8" cellspacing="0">
+                        <thead>
+                            <tr>
+                            <th>Date/Year</th>
+                            <th>Version / Milestone</th>
+                            <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1998</td>
+                                <td>XML development began</td>
+                                <td>The first official version of XML was published by the W3C, setting the foundation for structured data markup.</td>
+                            </tr>
+                            <tr>
+                                <td>1998</td>
+                                <td>XML 1.0 released</td>
+                                <td>Microsoft created the XMLHttpRequest object in Internet Explorer 5 to allow asynchronous communication with the server, originally for use in Outlook Web Access.</td>
+                            </tr>
+                            <tr>
+                                <td>2000</td>
+                                <td>Introduction of supporting technologies</td>
+                                <td>Tools like XSLT, XPath, and DOM were introduced to transform and navigate XML documents.</td>
+                            </tr>
+                            <tr>
+                                <td>2001</td>
+                                <td>XML Schema (XSD) introduced</td>
+                                <td>XML Schema became the standard for validating the structure and content of XML data.</td>
+                            </tr>
+                            <tr>
+                                <td>2007</td>
+                                <td>XML 1.1 finalized</td>
+                                <td>This version addressed certain Unicode and naming limitations in XML 1.0 but saw limited adoption.</td>
+                            </tr>
+                            <tr>
+                                <td>2010s onward</td>
+                                <td>Widespread enterprise use</td>
+                                <td>Despite JSON’s rise, XML remained essential in industries like publishing, banking, and software configurations.</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </section>
+
+                <section class="xml-func" id="xml-func">
+                    <h1>XML Building Blocks</h1>
+                    <p> The building block of XML lies within its formulation, what is it made of and what the starting point is of the language.</p>
+                <table class="xml-func-ver" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3>XML Declaration</h3>
+                                    <p> XML declaration contains details that prepare an XML processor to parse the XML document. It is optional, but when used, it must appear in the first line of the XML document.</p>
+                                    <div class="xml-example-container">
+                                      <div class="xml-example-panel">
+                                          <textarea class="xml-example-input" readonly>
+        &lt;?xml version=”1.0” encoding=”UTF-8”?&gt;
+                                      </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="xml-example-output">
+                                          <img src="xml-declaration-img.png" alt="Static Example">
+                                      </div>
+                                  </div>
+                                  <ul class="xml-dec-list">
+                                        <li> <b> &lt;?xml </b> → Indicates it's an XML declaration. </li>
+                                        <li> <b> version="1.0" </b> → Specifies the XML version being used. </li>
+                                        <li> <b> encoding="UTF-8" </b> → Defines the character encoding (UTF-8 is standard). </li>
+                                  </ul>
+                                  </div>
+                                </td>
+
+                                <td>
+                                    <h3>XML Comments</h3>
+                                    <p> XML comments are notes or explanations added to the XML code that are ignored by the parser. They are used to document the code or leave messages for developers. </p>
+                                     <div class="xml-example-container">
+                                      <div class="xml-example-panel">
+                                          <textarea class="xml-example-input" readonly>
+        &lt;! - - This is a comment in XML - - &gt;
+                                      </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="xml-example-output">
+                                          <img src="comment-img.png" alt="Static Example">
+                                      </div>
+                                  </div>
+                                  <ul class="xml-dec-list">
+                                        <li> <b> &lt;?xml </b> → Indicates it's an XML declaration. </li>
+                                        <li> <b> version="1.0" </b> → Specifies the XML version being used. </li>
+                                        <li> <b> encoding="UTF-8" </b> → Defines the character encoding (UTF-8 is standard). </li>
+                                  </ul>
+                                  </div>
+                                </td>
+                        </tr>
+                </table>
+                </section>
+
+
+                <section id="xml-elements">
+                    <h1> XML Elements </h1>
+                    <p> XML elements can be defined as building blocks of an XML. Elements can behave as containers to hold text, elements, attributes, media objects or all of these.</p>
+                    <table class="xml-func-ver" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3>XML Empty Element</h3>
+                                    <p> An empty element in XML is an element that has no content between the start and end tags. It does not contain text or child elements.</p>
+                                    <div class="xml-example-container">
+                                      <div class="xml-example-panel">
+                                          <textarea class="xml-example-input" readonly> 
+        &lt;line break /&gt;
+        &lt;image /&gt;
+        &lt;hr /&gt;
+                                      </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="xml-example-output">
+                                          <img src="empty-element-img.png" alt="Empty Element">
+                                      </div>
+                                  </div>
+                                  <ul class="xml-dec-list">
+                                        <li> <b> &lt;linebreak /&gt; </b> → It is a self-closing tag with no content inside.. </li>
+                                        <li> <b> &lt;image /&gt; </b> → It is a self-closing tag with no content inside.. </li>
+                                        <li> <b> &lt;hr /&gt; </b> → It is a self-closing tag with no content inside. </li>
+                                  </ul>
+                                  </div>
+                                </td>
+
+                                <td>
+                                    <h3>XML Nested Elements</h3>
+                                    <p> Nested elements in XML are elements that are placed inside other elements to represent a hierarchical (parent-child) structure of data. </p>
+                                     <div class="xml-example-container">
+                                      <div class="xml-example-panel">
+                                      <textarea class="xml-example-input" readonly>
+        &lt;student&gt;
+            &lt;name&gt; Ding Darna &lt;/name&gt;
+            &lt;course&gt;
+                &lt;program&gt; BSIT &lt;/program/gt;
+                &lt;year&gt; 2nd Year &lt;/year&gt;
+            &lt;/course&gt;
+        &lt;/student&gt;              </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="xml-example-output">
+                                          <img src="nested-element-img.png" alt="Nested Element">
+                                      </div>
+                                  </div>
+                                  <ul class="xml-dec-list">
+                                        <li> The XML declaration is at the top. </li>
+                                        <li> <b> &lt;student&gt; </b> → Represents the root element. </li>
+                                        <li> <b> &lt;course&gt; </b> → Represents a program element &lt;program&gt; and &lt;year&gt;. </li>
+                                        <li> All tags are properly opened and closed. </li>
+                                        <li> Indentation helps make the hierarchy clear. </li>
+                                  </ul>
+                                  </div>
+                                </td>
+                        </tr>
+                </table>
+                </section> 
+
+                <section id="xml-tags">
+                    <h1> XML Tags</h1>
+                    <p> XML tags are used to define and structure data in a readable and organized format. Unlike HTML, XML tags are not predefined, meaning users can create custom tags that describe the data they contain. These tags follow strict syntax rules, such as proper nesting and case sensitivity, to ensure consistency and compatibility across different systems and applications.</p>
+                    <h3> Here are some common XML Tags</h3>
+                      <table class="xml-tags-tbl" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                  <h3>Start Tag</h3>
+                                  <p> <b> Start tag </b> marks the beginning of an XML element. It is written with the element name inside angle brackets.</p>
+                                  <div class="xml-example-container">
+                                      <div class="xml-example-panel">
+                                          <textarea class="xml-example-input" readonly>
+   &lt;name&gt; 
+
+   &lt;/name&gt;
+                                      </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="xml-example-output">
+                                          <img src="html-tags-img.png" alt="Start Tag" style="position: static;">
+                                      </div>
+                                  </div>
+                                  <ul class="xml-dec-list">
+                                        <li> A start tag marks the beginning of an XML element. It is written with the element name inside angle brackets. </li>
+                                  </ul>
+                                  </div>
+                                </td> 
+
+                                <td>
+                                    <h3> End Tag </h3>
+                                    <p>  <b> End tag </b> marks the end of an XML element. It is written like the start tag but with a forward slash /. </p>
+                                     <div class="xml-example-container">
+                                       <div class="xml-example-panel">
+                                          <textarea class="xml-example-input" readonly>
+   &lt;name&gt; 
+
+   &lt;/name&gt;
+                                      </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="xml-example-output">
+                                          <img src="html-tags-img.png" alt="Start Tag" style="position: static;">
+                                      </div>
+                                    </div>
+                                    <ul class="xml-dec-list">
+                                        <li> An end tag marks the end of an XML element. It is written like the start tag but with a forward slash /. </li>
+                                    </ul>
+                                 </div>
+                                </td> 
+
+                                <td>
+                                    <h3> Empty Tag </h3>
+                                    <p>  An Empty tag does not contain child elements. It combines start and end tag into a single self-closing tag.
+ </p>
+                                                                         <div class="xml-example-container">
+                                       <div class="xml-example-panel">
+                                          <textarea class="xml-example-input" readonly>
+   &lt;book&gt; 
+        &lt;title&gt;It Ends With Us&lt;/title&gt;
+        &lt;author&gt;Coleen Hoover&lt;/author&gt;
+        &lt;published /&gt;
+        &lt;coverImage /&gt;
+   &lt;/book&gt;
+                                      </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="xml-example-output">
+                                          <img src="empty-tag-img.png" alt="Start Tag" style="position: static;">
+                                      </div>
+                                    </div>
+                                    <ul class="xml-dec-list">
+                                        <li> <b> &lt;published /&gt;</b> and <b> &lt;coverImage /&gt;</b> are empty tags, meaning they do not contain any content between a start and end tag. </li>
+                                    </ul>
+                                 </div>
+                                </td> 
+                            </tr> </table>
+                </section>
+
+                <section id="xml-attributes">
+                    <h1> XML Attributes and Characters </h1>
+                    <p> XML attributes provide additional information about elements and are placed within the start tag, using a name-value pair format like attribute="value". Characters in XML refer to the text data inside elements, and special characters like &lt;, &gt;, and &amp; must be written using escape codes (&amp;lt;, &amp;gt;, &amp;amp;) to avoid parsing errors. Both attributes and characters must follow strict XML syntax rules to ensure well-formed and valid documents.</p>
+                    <table class="xml-func-ver" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3>XML Attributes</h3>
+                                    <p> Attributes are part of XML elements. An element can have multiple unique attributes. Attribute gives more information about XML elements. To be more precise, they define properties of elements. An XML attribute is always a name-value pair.</p>
+                                    <div class="xml-example-container">
+                                      <div class="xml-example-panel">
+                                          <textarea class="xml-example-input" readonly> 
+        &lt;student id="1012" name=Ding Darna" course="BSIT"/&gt;
+                                      </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="xml-example-output">
+                                          <img src="xml-attribute.png" alt="Empty Element">
+                                      </div>
+                                  </div>
+                                  <ul class="xml-dec-list">
+                                        <li> <b> &lt;student&gt; </b> → Represents the root element. </li>
+                                        <li> <b> id, name, and course </b> → Attributes of the student element. </li>
+                                        <li> Each attribute is written inside the <b> start tag </b> as name="value" pairs. </li>
+                                        <li> This element is <b> self-closing </b> because it doesn't contain inner content. </li>
+                                  </ul>
+                                  </div>
+                                </td>
+
+                                <td>
+                                    <h3>XML Character Entities</h3>
+                                    <p> Character entities are special codes used in XML to represent characters that are reserved or not allowed directly in the content (like &lt;, &gt;, &amp;, etc.). </p>
+                                     <div class="xml-example-container">
+                                      <div class="xml-example-panel">
+                                      <textarea class="xml-example-input" readonly>
+        &lt;message&gt;
+            Welcome to XML &amp; CtrlCode101!
+            12 &lt; 28 is a true statement.
+            Use &quot;quotes&quot; for attributes and text.
+        &lt;/message&gt;              
+
+                                    </textarea>
+                                      <label class="example-label">Example Output:</label>
+                                      <div class="xml-example-output">
+                                          <img src="xml-characters.png" alt="Characters">
+                                      </div>
+                                  </div>
+                                  <ul class="xml-dec-list">
+                                        <li><p>  <code><b> &amp;amp;</b></code> → Represents the ampersand (&). </p></li>
+                                        <li><p>  <code><b> &amp;lt;</b></code> and <code> <b> &amp;gt;</b></code> → Represents less than (&lt;) and greater than (&gt;) </p></li>
+                                        <li><p>  <code><b> &amp;quot;</b></code> → Represents a double quote (") </p></li>
+                                  </ul>
+                                  </div>
+                                </td>
+                        </tr>
+                </table>
+                </section> 
+
+                <section id="xml-overall-example" class="xml-overall-example">
+                    <h1>Overall Example Board</h1>
+                    <p>Try XML Yourself!</p>
+                    <div class="xml-overall-panel">
+                        <textarea class="xml-overall-input" id="overall-xml-input" placeholder="Type your XML code here..." style="min-height:80px"></textarea>
+                        <button onclick="runOverallXMLExample()" style="margin:8px 0;" class="example-btn">Run</button>
+                        <label class="example-label">XML Output:</label>
+                        <div class="xml-datatype-output" id="overall-xml-output" style="min-height:40px; white-space:pre;"></div>
+                    </div>
+                </section>
+            </div>
+                
+            <div class ="footer">
+                <p> &copy; 2023 CtrlCode101. All rights reserved. </p>
+                <p> Created by: Bautista | Dela Cruz | Molina | Naag | Ordaniel | Oseo </p>
+                </div>
+              <script>
+                    function scrollToSection(id) {
+                    if (id) {
+                        const section = document.querySelector(id);
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    }
+              </script>
+              <script>
+                    function toggleExample(btn) {
+                        const panel = btn.nextElementSibling;
+                        panel.style.display = panel.style.display === "none" ? "block" : "none";
+                    }
+                </script>
+
+              <script>
+                    function runOverallXMLExample() {
+                        const xmlCode = document.getElementById('overall-xml-input').value;
+                        const outputDiv = document.getElementById('overall-xml-output');
+                        try {
+                            // Try to parse the XML to check for errors
+                            const parser = new DOMParser();
+                            const xmlDoc = parser.parseFromString(xmlCode, "application/xml");
+                            const parseError = xmlDoc.getElementsByTagName("parsererror");
+                            if (parseError.length > 0) {
+                                outputDiv.textContent = "Error: Invalid XML syntax.";
+                                outputDiv.style.color = "red";
+                            } else {
+                                // Pretty print the XML
+                                outputDiv.textContent = formatXML(xmlCode);
+                                outputDiv.style.color = "#222";
+                            }
+                        } catch (e) {
+                            outputDiv.textContent = "Error: " + e.message;
+                            outputDiv.style.color = "red";
+                        }
+                    }
+
+                    // Optional: Pretty print XML
+                    function formatXML(xml) {
+                        let formatted = '';
+                        const reg = /(>)(<)(\/*)/g;
+                        xml = xml.replace(reg, '$1\r\n$2$3');
+                        let pad = 0;
+                        xml.split('\r\n').forEach((node) => {
+                            let indent = 0;
+                            if (node.match(/.+<\/\w[^>]*>$/)) {
+                                indent = 0;
+                            } else if (node.match(/^<\/\w/)) {
+                                if (pad !== 0) pad -= 1;
+                            } else if (node.match(/^<\w([^>]*[^/])?>.*$/)) {
+                                indent = 1;
+                            } else {
+                                indent = 0;
+                            }
+                            let padding = new Array(pad + 1).join('  ');
+                            formatted += padding + node + '\r\n';
+                            pad += indent;
+                        });
+                        return formatted.trim();
+                    }
+            </script>  
+        </body>
+</html>

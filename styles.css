@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('bg-gif.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #5573a7b8;
+  padding: 10px 20px;}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #e6edfb;
+  margin-left: -650px;
+  font-family: tahoma;}
+
+.logo-icon {
+    width:40px;
+    height: 40px;}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;}
+
+.search-box {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 250px;}
+
+.search-box2 {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 550px;
+  height: 35px;
+  margin-left: 15px;
+  background-color: #f2f4f9b5;}
+
+.sub-nav {
+  display: flex;
+  overflow-x: auto;
+  background: #5573a7d9;
+  padding: 10px 20px;
+  gap: 15px;
+  border-top: #294474d9 1px solid;}
+
+
+.sub-nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: Verdana;}
+
+.subnav {
+    background-color: #203965f1;
+    font-family: verdana;
+    width: 150px;
+    height: 30px;
+    border-radius: 7px;
+    color: white;}
+
+.main {
+    height: 400px;
+    background-color: #a0b3d378;
+    width: 1000px;
+    margin-left: 17%;
+    margin-top: 7%;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    padding-right: 19px; }
+
+.main img {
+    width: 370px;
+    height: 370px;}
+
+.main p {
+    font-family: arial;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-bottom: -35px;}
+
+.main-text {
+    margin-top: 7px;}
+
+.main h1 {
+    text-align:left;
+    font-family: tahoma;
+    font-size: 50px;
+    margin-left: 12px;}
+
+.main .credits-text p {
+    font-family: tahoma;
+    font-size: 14px;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 70px;
+    color: rgba(255, 255, 255, 0.518);}

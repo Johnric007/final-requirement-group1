@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Aira Bianca">
+        <title> CtrlCode101-HTML </title>
+        <link rel="icon" href="integ-logo.png">
+        <link rel="stylesheet" href="html-style.css">
+    </head>
+    <body>
+         <header class="top-nav">
+            <img class= "logo-icon" src="integ-logo.png">
+            <div class="logo">CtrlCode101</div>
+            <nav class="nav-links">
+                <a href="#">Take Control. Learn to Code.</a>
+                <input type="text" placeholder="Search..." class="search-box" />
+            </nav>
+          </header>
+
+            <div class="sub-nav">
+                <a href="home.html" title="HOME"><button class="subnav">HOME</button></a>
+                <a href="CSS.html" title="CSS"><button class="subnav">CSS</button></a>
+                <a href="JS.html" title="JAVASCRIPT"><button class="subnav">JAVASCRIPT</button></a>
+                <a href="AJAX.html" title="AJAX"><button class="subnav">AJAX</button></a>
+                <a href="XML.html" title="XML"><button class="subnav">XML</button></a>
+            </div>
+
+            <div class="third-nav">
+                <h3> HyperText Markup Language, the building-block of every web pages! </h3>
+            </div>
+
+            <div class="main">
+                <img class="main-image" src="html-img.png" alt="Main Image">
+                <div class="main-text">
+                    <h1> Let's Learn More About HTML Language.</h1>
+                    <p> Choose a topic below</p>
+                     <div class="dropdown-container">
+                         <select id="html-topics" onchange="scrollToSection(this.value)">
+                            <option value=""> Select a topic </option>
+                            <option value="#definition"> Definition of HTML </option>
+                            <option value="#history"> History of HTML </option>
+                            <option value="#xhtml"> XHTML </option>
+                            <option value="#html-ver"> Exploring HTML Versions </option>
+                            <option value="#html5"> HTML5 </option>
+                            <option value="#html-tags"> HTML Tags </option>
+                            <option value="#html-form-inputs"> HTML Forms & Inputs </option>
+                            <option value="#html-overall-example"> HTML Overall Example Board </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="html-body">
+               <section id="definition">
+                    <h1> Definitions of HTML</h1>
+                    <p><b> HyperText Markup Language (HTML) </b> is the standardized markup language used to create and structure content on the World Wide Web. At its core, HTML consists of a series of elements—each defined by an opening tag, optional attributes, and a closing tag—that tell web browsers how to render text, images, links, forms, and other multimedia on the page. By nesting these elements hierarchically, developers can build everything from simple static documents to rich, interactive applications, ensuring that content is both machine-readable and accessible across devices.</p>
+                </section>
+
+                <section id="history">
+                    <h1> History of HTML</h1>
+                    <table cellpadding="8" cellspacing="0">
+                        <thead>
+                            <tr>
+                            <th>Date/Year</th>
+                            <th>Version / Milestone</th>
+                            <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1991</td>
+                                <td>HTML first defined</td>
+                                <td>Tim Berners-Lee created the first version of HTML.</td>
+                            </tr>
+                            <tr>
+                                <td>1993</td>
+                                <td>HTML 1.2</td>
+                                <td>Dave Raggett drafted HTML+.</td>
+                            </tr>
+                            <tr>
+                                <td>1994</td>
+                                <td>Foundation of W3C</td>
+                                <td>The World Wide Web Consortium (W3C) was founded by Tim Berners-Lee.</td>
+                            </tr>
+                            <tr>
+                                <td>March 1995</td>
+                                <td>HTML 2.0</td>
+                                <td>First formal HTML standard by IETF. Introduced forms, basic layout, and improved document structure.</td>
+                            </tr>
+                            <tr>
+                                <td>September 1995</td>
+                                <td>HTML 3.0</td>
+                                <td>Short-lived; quickly replaced by HTML 3.2.</td>
+                            </tr>
+                            <tr>
+                                <td>1996</td>
+                                <td>CSS introduced</td>
+                                <td>Critical step toward modern web design. Separated content from presentation, enabling better control over fonts, colors, and layout.</td>
+                            </tr>
+                            <tr>
+                                <td>January 1997</td>
+                                <td>HTML 3.2</td>
+                                <td>Added tables, applets, and scripting support (JavaScript).</td>
+                            </tr>
+                            <tr>
+                                <td>December 1997</td>
+                                <td>HTML 4.0</td>
+                                <td>Introduced three flavors (Strict, Transitional, Frameset) and stronger support for CSS, scripting, and accessibility.</td>
+                            </tr>
+                            <tr>
+                                <td>1999</td>
+                                <td>HTML 4.01</td>
+                                <td>Minor revision of HTML 4.0 that fixed bugs and clarified specs; became the dominant version until HTML5.</td>
+                            </tr>
+                            <tr>
+                                <td>2000</td>
+                                <td>XHTML 1.0</td>
+                                <td>Reformulated HTML 4.01 using XML rules (stricter syntax).</td>
+                            </tr>
+                            <tr>
+                                <td>2012</td>
+                                <td>HTML5</td>
+                                <td>
+                                Added semantic elements (<code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, etc.), multimedia support (<code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>), and new APIs (localStorage, geolocation, canvas).
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>2014</td>
+                                <td>XHTML5</td>
+                                <td>Not a separate standard but a way of writing HTML5 with XML-style syntax.</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                </section>
+
+                <section class="xhtml" id="xhtml">
+                    <h1>What is XHTML?</h1>
+                    <div class="xhtml-flex">
+                        <img class="xhtml-image" src="xhtml-img.jfif" alt="XHTML Image">
+                        <p>Extensible HyperText Markup Language or XHTML is a reformulation of HTML as an XML application, combining the familiar tags and structure of traditional HTML with the stricter, well-formed syntax rules of XML. By enforcing proper nesting, lowercase tag names, and mandatory closing tags, XHTML ensures that documents are consistently parsed by browsers and XML tools alike. It is supported by all major browsers, which aims to improve code quality, facilitate data exchange with XML-based systems, and pave the way for future web standards. In summary, XHTML represents a significant step towards a more structured and reliable web, promoting best practices in web development and ensuring compatibility with future technologies.</p>
+                        <p>One of the key advantages of XHTML is its emphasis on clean, standardized code, which enhances both readability and maintainability for developers. Since XHTML documents must be well-formed, errors are more easily detected and resolved, reducing the likelihood of inconsistent behavior across different browsers or devices. This strictness also makes XHTML more compatible with other XML-based technologies. Furthermore, XHTML encourages developers to separate content from presentation by promoting the use of CSS, aligning with modern web design principles. Overall, XHTML not only reinforces web accessibility and interoperability but also prepares websites for future innovations in the semantic web and responsive design.</p>
+                    </div>
+                </section>
+
+                <section id="html-ver">
+                    <h1>HTML Versions</h1>
+                    <table class="html-ver" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3>HTML 1.0</h3>
+                                    <p> <b> HTML 1.0 </b> introduced the basic structure of web pages, allowing the use of simple text and images. It laid the groundwork for the development of more interactive and visually dynamic websites.</p>
+                                </td>
+                                <td>
+                                    <h3>HTML 2.0</h3>
+                                    <p> <b> HTML 2.0 </b> expanded on the original by adding support for tables, text boxes, option buttons, and customizable page backgrounds. This allowed for more user input and basic formatting capabilities.</p>
+                                </td>
+                        </tr>
+                        <tr>
+                                                               <td>
+                                    <h3>HTML 3.0</h3>
+                                    <p> <b> HTML 3.2 </b> introduced greater flexibility with enhanced form elements and the inclusion of tables and support for mathematical equations. This version made websites more interactive and visually organized.</p>
+                                </td>
+                                <td>
+                                    <h3>HTML 4.01</h3>
+                                    <p> <b> HTML 4.01 </b> emphasized the separation of content and design by integrating cascading style sheets (CSS). It also enabled the use of scripts to control multimedia elements, improving dynamic content delivery</p>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h3> HTML 5 </h3>
+                                <p> <b> HTML 5 </b> revolutionized web development with built-in support for audio, video, and interactive graphics. It ensures consistent rendering across various browsers and devices, supporting responsive and modern web design. </p>
+                            </td>
+                        </tr>
+                </table> </section>
+
+                <section id="html5">
+                    <h1> What is more in HTML5? </h1>
+                    <div class="html5-flex">
+                        <p> <b> HTML5 </b> is the latest major version of the HTML standard used for creating and structuring web pages and applications. It was developed to address the limitations of previous versions by introducing a more powerful and flexible framework for building modern websites. HTML5 offers robust support for multimedia elements like audio, video, and scalable graphics without the need for external plugins, making content more accessible and interactive. It also introduced new semantic elements such as article, section, and nav, which improve the readability of code and enhance search engine optimization.
+                            Designed with performance in mind, HTML5 supports offline capabilities, local storage, and responsive design features, which are essential for modern web apps. While it is supported by all major browsers, the level of support for some features may vary, especially on older browser versions, so developers often use fallbacks or polyfills for compatibility. </p>
+                        <img class="html5-image" src="html5-img.png" alt="HTML5 Image">
+                    </div>
+                </section>
+
+                <section id="html-tags">
+                    <h1> Introducing HTML Tags </h1>
+                    <p> HTML tags are the codes used to define elements on a web page. They are written within angle brackets, such as <code>&lt;p&gt;</code> for a paragraph or <code>&lt;h1&gt;</code> for a main heading, and they tell the browser how to display the enclosed content.
+                            Most HTML tags come in pairs: an opening tag (e.g., <code>&lt;p&gt;</code>) and a closing tag (e.g., <code>&lt;/p&gt;</code>), with the content placed between them. Some tags, like <code>&lt;img&gt;</code> and <code>&lt;br&gt;</code>, are self-closing and do not require an end tag. HTML tags can also include attributes, which provide additional information or functionality (e.g., <code>&lt;img src="image.jpg" alt="Example"&gt;</code>). Overall, HTML tags form the basic structure and layout of every web page.</p>
+                    <h3> Here are some common HTML Tags</h3>
+
+                    <table class="html-tags" cellpadding="8" cellspacing="8">
+                        <tr>
+                            <td>
+                                <h3> &lt;h1&gt; </h3>
+                                <p> Defines the main heading of a page. </p>
+                                <div class="example-container">
+                                    <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                <div class="example-panel" style="display:none;">
+                                    <textarea class="example-input" oninput="showOutput(this)">&lt;h1&gt;Hello World!&lt;/h1&gt;</textarea>
+                                    <label class="example-label">Test your code:</label>
+                                    <div class="example-output"></div>
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <h3> &lt;p&gt; </h3>
+                                <p> Defines a paragraph of text. </p>
+                                 <div class="example-container">
+                                    <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                <div class="example-panel" style="display:none;">
+                                    <textarea class="example-input" oninput="showOutput(this)">&lt;p&gt;HTML Paragraph is a block of text separated from other content by some spacing&lt;/p1&gt;</textarea>
+                                    <label class="example-label">Test your code:</label>
+                                    <div class="example-output"></div>
+                                </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <h3> &lt;a&gt; </h3>
+                                <p> Defines a hyperlink to another page or resource. </p>
+                                <div class="example-container">
+                                    <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                <div class="example-panel" style="display:none;">
+                                    <textarea class="example-input" oninput="showOutput(this)">&lt;a href="https://www.w3schools.com"&gt;Visit W3Schools.com!&lt;/a&gt;</textarea>
+                                    <label class="example-label">Test your code:</label>
+                                    <div class="example-output"></div>
+                                </div>
+                                </div>
+                            </td>
+                            <td>
+                                <h3> &lt;img&gt; </h3>
+                                <p> Embeds an image in the document. </p>
+                                <div class="example-container">
+                                    <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                <div class="example-panel" style="display:none;">
+                                    <textarea class="example-input" oninput="showOutput(this)">&lt;h1&gt;Hello World!&lt;/h1&gt;</textarea>
+                                    <label class="example-label">Test your code:</label>
+                                    <div class="example-output"></div>
+                                </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <h3> &lt;div&gt; </h3>
+                                <p> Defines a division or section in the document, often used for layout purposes. </p>
+                                <div class="example-container">
+                                    <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                <div class="example-panel" style="display:none;">
+                                    <textarea class="example-input" oninput="showOutput(this)">&lt;h1&gt;Hello World!&lt;/h1&gt;</textarea>
+                                    <label class="example-label">Test your code:</label>
+                                    <div class="example-output"></div>
+                                </div>
+                                </div>
+                            </td>
+
+                            <td>
+                                <h3> &lt;li&gt; </h3>
+                                <p> Defines a list item in an ordered or unordered list. </p>
+                                <div class="example-container">
+                                    <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                <div class="example-panel" style="display:none;">
+                                    <textarea class="example-input" oninput="showOutput(this)">&lt;h1&gt;Hello World!&lt;/h1&gt;</textarea>
+                                    <label class="example-label">Test your code:</label>
+                                    <div class="example-output"></div>
+                                </div>
+                                </div>
+                            </td>
+                        </tr> </table>
+                        <h3> Overall Example Board: </h3>
+                        <div class="example-board">
+                                <div class="example-board-panel" style="display:flex;">
+                                    <textarea class="example-board-input" oninput="showOutput(this)"></textarea>
+                                    <label class="example-board-label">Test your code:</label>
+                                    <div class="example-board-output"></div>
+                                </div>
+                        </div>
+                </section>
+
+                <section id="html-attributes">
+                    <h1> What is HTML Attributes? </h1>
+                    <p> HTML attributes are used to provide additional details or instructions about an HTML element, helping to customize how it behaves, looks, or interacts with users and the browser. These attributes are always included within the opening tag of an element and are written in the format of name-value pairs, such as name="value". They modify the default behavior of elements or supply important metadata, making web pages more functional, interactive, and accessible. </p>
+                    <h3> Here are some common HTML Attributes </h3>
+                     <table class="html-ver" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3> &lt;a&gt;</h3>
+                                    <p>  The href attribute, used in the &lt;a&gt; tag, specifies the destination URL of a hyperlink, allowing users to navigate to another page or site. </p>
+                                    <div class="example-container">
+                                        <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                    <div class="example-panel" style="display:none;">
+                                        <textarea class="example-input" oninput="showOutput(this)">&lt;h1&gt;Hello World!&lt;/h1&gt;</textarea>
+                                        <label class="example-label">Test your code:</label>
+                                    <div class="example-output"></div>
+                                    </div>
+                                    </div>
+                                </td> 
+
+                                <td>
+                                    <h3> &lt;src&gt;</h3>
+                                    <p>   The src attribute in the &lt;src&gt; tag indicates the location of the image file to be displayed, while the alt attribute offers a text description of the image for accessibility and as fallback content if the image fails to load. </p>
+                                    <div class="example-container">
+                                        <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                    <div class="example-panel" style="display:none;">
+                                        <textarea class="example-input" oninput="showOutput(this)">&lt;h1&gt;Hello World!&lt;/h1&gt;</textarea>
+                                        <label class="example-label">Test your code:</label>
+                                    <div class="example-output"></div>
+                                    </div>
+                                    </div>
+                                </td> 
+
+                                <td>
+                                    <h3> &lt;input&gt;</h3>
+                                    <p>  In form inputs, the type attribute defines the kind of input field, such as text, password, or email, enabling appropriate user input and validation. </p>
+                                    <div class="example-container">
+                                        <button class="example-btn" onclick="toggleExample(this)">Example</button>
+                                    <div class="example-panel" style="display:none;">
+                                        <textarea class="example-input" oninput="showOutput(this)">&lt;h1&gt;Hello World!&lt;/h1&gt;</textarea>
+                                        <label class="example-label">Test your code:</label>
+                                    <div class="example-output"></div>
+                                    </div>
+                                    </div>
+                                </td> 
+                            </tr> </table>
+                            <h3> Overall Example Board: </h3>
+                        <div class="example-board">
+                                <div class="example-board-panel" style="display:flex;">
+                                    <textarea class="example-board-input" oninput="showOutput(this)"></textarea>
+                                    <label class="example-board-label">Test your code:</label>
+                                    <div class="example-board-output"></div>
+                                </div>
+                        </div>
+                </section>
+                
+                <section id="html-form-inputs">
+                    <h1> What is HTML Forms and Inputs </h1>
+                    <p> HTML forms are used to collect user input and send data to a server for processing, such as logging in, signing up, or submitting feedback. A form is created using the &lt;form&gt; tag, which can include various input elements like text fields, radio buttons, checkboxes, dropdown menus, and buttons. Each input element, defined by the &lt;input&gt; tag or others like &lt;text area&gt; and &lt;select&gt;, captures specific types of user data. Attributes such as type, name, value, and placeholder help control the behavior and labeling of each input field. Forms often include a submit button (&lt;button type="submit"&gt;) that sends the collected data. </p>
+                    <h3> Here are the example of these two: </h3>
+                    <table class="html-ver" cellpadding="8" cellspacing="8">
+                        <tr>
+                                <td>
+                                    <h3> HTML Forms</h3>
+                                    <p>  HTML forms are used to collect and submit user data to a server for processing, typically using the &lt;form&gt; element. Inside a form, HTML input elements such as text fields, radio buttons, checkboxes, and dropdowns are used to capture different types of user input.  </p>
+                                    <div class="example-container">
+                                    <div class="html-example-panel">
+                                        <textarea class="html-example-input" oninput="showOutput(this)">
+                                            &lt;form action="/submit" method="post"&gt;
+                                            &lt;label for="name"&gt;Name:&lt;/label&gt;
+                                            &lt;input type="text" id="name" name="username" placeholder="Enter your name"&gt;&lt;br&gt;&lt;br&gt; &lt;input type="submit" value="Submit"&gt; 
+                                            &lt;/form&gt;
+                                        </textarea>
+                                        <label class="example-label">Test your code:</label>
+                                    <div class="html-example-output"></div>
+                                    </div>
+                                    </div>
+                                </td> 
+                    
+                                <td>
+                                    <h3> HTML Input</h3>
+                                    <p>  An HTML &lt;input&gt; element is used to create interactive fields in a form where users can enter or select data, such as text, numbers, dates, or options. It is highly versatile and controlled by the type attribute, including text boxes, checkboxes, radio buttons, and more. </p>
+                                    <div class="example-container">
+                                    <div class="html-example-panel">
+                                        <textarea class="html-example-input" oninput="showOutput(this)">
+                                        &lt;form action="/submit" method="post"&gt;
+                                            &lt;label for="email"&gt;Email:&lt;/label&gt;
+                                            &lt;input type="email" id="email" name="user_email" placeholder="Enter your email" required&gt;
+                                            &lt;input type="submit" value="Submit"&gt;
+                                        &lt;/form&gt;
+                                        </textarea>
+                                        <label class="example-label">Test your code:</label>
+                                    <div class="html-example-output"></div>
+                                    </div>
+                                    </div>
+                                </td> </tr> </table>
+                </section>
+
+                <section id="html-overall-example" class="html-overall-example">
+                        <h1>Overall Example Board</h1>
+                        <p>Try HTML Yourself!</p>
+                        <div class="html-overall-panel">
+                            <textarea class="html-overall-input" id="overall-html-input" placeholder="Type your HTML code here..." style="min-height:80px"></textarea>
+                            <button onclick="runOverallHTMLExample()" style="margin:8px 0;" class="example-btn">Run</button>
+                            <label class="example-label">HTML Output:</label>
+                            <div class="html-datatype-output" id="overall-html-output" style="min-height:40px; background:#fff; border:1px solid #ccc; padding:8px;"></div>
+                        </div>
+                </section>
+            </div>
+
+            <div class ="footer">
+                <p> &copy; 2023 CtrlCode101. All rights reserved. </p>
+                <p> Created by: Bautista | Dela Cruz | Molina | Naag | Ordaniel | Oseo </p>
+
+              <script>
+                    function scrollToSection(id) {
+                    if (id) {
+                        const section = document.querySelector(id);
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    }
+              </script>
+              <script>
+                    function toggleExample(btn) {
+                        const panel = btn.nextElementSibling;
+                        panel.style.display = panel.style.display === "none" ? "block" : "none";
+                    }
+
+                    function showOutput(textarea) {
+                        const outputDiv = textarea.parentElement.querySelector('.example-output');
+                        outputDiv.innerHTML = textarea.value.replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+                    }
+
+                    function showOutput(textarea) {
+                        let outputDiv =
+                            textarea.parentElement.querySelector('.example-output') ||
+                            textarea.parentElement.querySelector('.example-board-output') ||
+                            textarea.parentElement.querySelector('.html-example-output');
+                        if (outputDiv) {
+                            outputDiv.innerHTML = textarea.value.replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+                        }
+                    }   
+              </script>
+
+              <script>
+                    function runOverallHTMLExample() {
+                        const htmlCode = document.getElementById('overall-html-input').value;
+                        const outputDiv = document.getElementById('overall-html-output');
+                        outputDiv.innerHTML = htmlCode;
+                    }
+            </script>
+    </body>
+</html>
